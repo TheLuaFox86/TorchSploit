@@ -1,0 +1,1 @@
+console.log(fengari.load(prompt("Enter Lua code:"))(vm))

@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "TorchSploit",
+    "version": "1.0.0",
+    "author": "TheLuaFox86",
+    "description": "A CodeTorch project script injector on chrome",
+    "permissions": [
+        "activeTab",
+        "scripting" 
+    ],
+    "host_permissions": [
+        "https://*/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://*/*"],
+            "js": ["inject.js"],
+            "all_frames": true,
+            "run_at": "document_end",
+            "world": "MAIN"
+        }
+    ],
+     "web_accessible_resources": [
+        {
+            "resources": ["lib/*", "sploits/*"],
+            "matches": ["https://*/*"]
+        }
+  ],
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnyE1OgGM9zeRhiW6QHV2hlZ/8B7Qsl0gpWg8ZqCDkKNCEcAg/cwmhCpCJ1i6/rdn9DitJBX0uyQuvMZp7upWF8FDHcdSkI8aYpIfJvL5bNJPX1k59W8S/w0u8jngb422sH3/d+RG26MNNesVUut2VG4zd8DE2vPe6M1WeuABfZP/r3wHZk5RuLqIzJC4GJrWD0ERpimAbs79KJk/1Sp2AgjzlyKqGdSIjoZJJ3ExD1T4TSZL0/9FXtQpSMeiwlekhNci6c3wBewv+P092yFs9/6G1Qtu5l/ET0kzvrUc/8S7X2wZm4bSSfMgbc9KMqhmHCSwdANwL2++Ro5kXrIkjQIDAQAB"
+}
